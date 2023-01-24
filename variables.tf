@@ -382,6 +382,12 @@ variable "lb_target_group_health_check_path" {
   default     = "/"
 }
 
+variable "lb_target_group_health_check_port" {
+  description = "(Optional) The non-standard port to ping health checks against.  If omitted, the traffic port is used."
+  type        = number
+  default     = -1
+}
+
 variable "lb_target_group_health_check_timeout" {
   description = "(Optional) The amount of time, in seconds, during which no response means a failed health check. The range is 2 to 120 seconds, and the default is 5 seconds."
   type        = number

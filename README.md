@@ -66,7 +66,7 @@ In order to run all checks at any point run the following command:
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_ecs-alb"></a> [ecs-alb](#module\_ecs-alb) | cn-terraform/ecs-alb/aws | 1.0.28 |
+| <a name="module_ecs-alb"></a> [ecs-alb](#module\_ecs-alb) | github.com/TeachstoneLLC/terraform-aws-ecs-alb.git | 926cc517b1d3b71ecd1dd6065f0b7a50f52558e9 |
 | <a name="module_ecs-autoscaling"></a> [ecs-autoscaling](#module\_ecs-autoscaling) | cn-terraform/ecs-service-autoscaling/aws | 1.0.6 |
 
 ## Resources
@@ -128,6 +128,7 @@ In order to run all checks at any point run the following command:
 | <a name="input_lb_target_group_health_check_interval"></a> [lb\_target\_group\_health\_check\_interval](#input\_lb\_target\_group\_health\_check\_interval) | (Optional) The approximate amount of time, in seconds, between health checks of an individual target. Minimum value 5 seconds, Maximum value 300 seconds. Default 30 seconds. | `number` | `30` | no |
 | <a name="input_lb_target_group_health_check_matcher"></a> [lb\_target\_group\_health\_check\_matcher](#input\_lb\_target\_group\_health\_check\_matcher) | The HTTP codes to use when checking for a successful response from a target. You can specify multiple values (for example, "200,202") or a range of values (for example, "200-299"). Default is 200. | `string` | `"200"` | no |
 | <a name="input_lb_target_group_health_check_path"></a> [lb\_target\_group\_health\_check\_path](#input\_lb\_target\_group\_health\_check\_path) | The destination for the health check request. | `string` | `"/"` | no |
+| <a name="input_lb_target_group_health_check_port"></a> [lb\_target\_group\_health\_check\_port](#input\_lb\_target\_group\_health\_check\_port) | (Optional) The non-standard port to ping health checks against.  If omitted, the traffic port is used. | `number` | `-1` | no |
 | <a name="input_lb_target_group_health_check_timeout"></a> [lb\_target\_group\_health\_check\_timeout](#input\_lb\_target\_group\_health\_check\_timeout) | (Optional) The amount of time, in seconds, during which no response means a failed health check. The range is 2 to 120 seconds, and the default is 5 seconds. | `number` | `5` | no |
 | <a name="input_lb_target_group_health_check_unhealthy_threshold"></a> [lb\_target\_group\_health\_check\_unhealthy\_threshold](#input\_lb\_target\_group\_health\_check\_unhealthy\_threshold) | (Optional) The number of consecutive health check failures required before considering the target unhealthy. Defaults to 3. | `number` | `3` | no |
 | <a name="input_log_bucket_id"></a> [log\_bucket\_id](#input\_log\_bucket\_id) | (Optional) if provided, the ID of a previously-defined S3 bucket to send LB logs to. | `string` | `null` | no |
