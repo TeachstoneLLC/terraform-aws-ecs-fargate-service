@@ -137,6 +137,10 @@ resource "aws_ecs_service" "service" {
     }
   }
   task_definition = var.task_definition_arn
+  lifecycle {
+    # Ignores changes to desired_count in post-creation plans that differ due to autoscaling
+    ignore_changes = ["desired_count"]
+  }
   tags = merge(
     var.tags,
     {
